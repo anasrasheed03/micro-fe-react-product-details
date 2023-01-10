@@ -1,10 +1,11 @@
 import logo from './logo.svg';
+import { Routes, Route } from "react-router-dom"
 import './App.css';
-
+import ProductDetails from './Component/product-details';
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
+      {/* <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.js</code> and save to reload.
@@ -17,7 +18,11 @@ function App() {
         >
           Learn React
         </a>
-      </header>
+      </header> */}
+      {/* <ProductDetails /> */}
+      <Routes>
+        <Route path="product/:productId" element={<ProductDetails />} />
+      </Routes>
     </div>
   );
 }
